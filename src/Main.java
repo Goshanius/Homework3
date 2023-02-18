@@ -12,17 +12,17 @@ public class Main {
 
     public static void task1() {
         System.out.println("Задача 1");
-        int apple = 50000;
+        int apple = 100;
         System.out.println("Значение переменной  apple  c типом  int  равно " + apple);
         byte boss = 55;
         System.out.println("Значение переменной  boss  c типом  byte  равно " + boss);
         short cat = 777;
         System.out.println("Значение переменной  cat  c типом  short  равно " + cat);
-        long dog = 3000L;
+        long dog = 300000000L;
         System.out.println("Значение переменной  dog  c типом  long  равно " + dog);
         float earth = 4.88f;
         System.out.println("Значение переменной  earth  c типом  float  равно " + earth);
-        double jungle = 1000;
+        double jungle = 3.21;
         System.out.println("Значение переменной  jungle  c типом  double  равно " + jungle);
     }
 
@@ -57,7 +57,7 @@ public class Main {
         System.out.println("За сутки машина произвела " + bytylkaSutki + " штук бутылок");
         long bytylka3day = 3 * bytylkaSutki;
         System.out.println("За три дня машина произвела " + bytylka3day + " штук бутылок");
-        long bytylkaMonth = 31 * bytylkaSutki;
+        long bytylkaMonth = 30 * bytylkaSutki;
         System.out.println("За месяц машина произвела " + bytylkaMonth + " штук бутылок");
 
     }
@@ -67,9 +67,9 @@ public class Main {
         int totalCans = 120;
         byte whitePaint = 2;
         byte brownPaint = 4;
-        int totalclasses = 120 / (whitePaint + brownPaint);
-        byte classWhite = (byte) (totalclasses * 2);
-        int classBrown = totalclasses * 4;
+        int totalclasses = totalCans / (whitePaint + brownPaint);
+        byte classWhite = (byte) (totalclasses * whitePaint);
+        int classBrown = totalclasses * brownPaint;
         System.out.println(" В школе где " + totalclasses + " классов, нужно " + classWhite + " банок белой  краски и " + classBrown + " банок коричневой краски");
     }
     public static void task6() {
@@ -93,8 +93,11 @@ public class Main {
         float averageRation =  (rationOne + rationTwo) / 2;
         double eat = loseWeight/averageRation;
         System.out.println("Если спортсмен будет питаться по первому рациону (потеря в весе около 250 грамм в день) " +
-                "то похудеет за  " + eatOne + " дней, если питаться по второму рациону (потеря в весе около 500 грамм " +
-                "в день) то похудеет за  " + eatTwo + " , в среднем может потребоваться " + eat + " дней " );
+                "то похудеет за  " + eatOne );
+        System.out.println("дней, если питаться по второму рациону (потеря в весе около 500 грамм " +
+                        "в день) то похудеет за  " + eatTwo  );
+        System.out.printf(" в среднем может потребоваться %.2f%n ",  eat );
+
     }
     public static void task8() {
         System.out.println("Задача 8");
